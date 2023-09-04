@@ -1,7 +1,12 @@
-function basicRecursion(number, iteration = 0) {
-  console.log(iteration);
-  if (iteration === number) return;
-  basicRecursion(number, iteration + 1);
+function basicRecursion(number) {
+  let couter = 0;
+  function recursionHelper() {
+    console.log(couter);
+    if (couter === number) return;
+    couter += 1;
+    recursionHelper();
+  }
+  recursionHelper();
 }
 
-basicRecursion(5);
+basicRecursion(15);
