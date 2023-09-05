@@ -1,4 +1,4 @@
-function basicRecursion(number) {
+function counterFromCero(number) {
   let couter = 0;
   function recursionHelper() {
     console.log(couter);
@@ -9,4 +9,4 @@ function basicRecursion(number) {
   recursionHelper();
 }
 
-basicRecursion(15);
+export default counterFromCero;
