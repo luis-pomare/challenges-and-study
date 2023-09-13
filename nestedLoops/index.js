@@ -19,8 +19,11 @@ information.push([
 ]);
 
 const printData = (data) => {
-  for (let i = 0; i <= data.length; i += 1) {
-    console.log(data[i]);
+  for (let i = 0; i < data.length; i += 1) {
+    for (let j = 0; j < data[i].length; j += 1) {
+      console.log(information[i][j])
+    }
+    console.log('---------------------------------');
   }
 }
 
