@@ -1,22 +1,5 @@
 function meetingPlanner(slotsA, slotsB, dur) {
-  let i = 0;
-  let j = 0;
 
-  while (i < slotsA.length && j < slotsB.length) {
-    const start = Math.max(slotsA[i][0], slotsB[j][0]);
-    const end = Math.min(slotsA[i][1], slotsB[j][1]);
-
-    if (end - start >= dur) {
-      return [start, start + dur];
-    }
-
-    // Move to the next slot for the person who ends earlier
-    if (slotsA[i][1] < slotsB[j][1]) {
-      i++;
-    } else {
-      j++;
-    }
-  }
 }
 
 // Test cases
