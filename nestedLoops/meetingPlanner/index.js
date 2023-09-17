@@ -1,5 +1,9 @@
 function meetingPlanner(slotsA, slotsB, dur) {
+  for (let i = 0; i < slotsA.length; i += 1) {
+    for (let j = 0; j < slotsB.length; i += 1) {
 
+    }
+  }
 }
 
 // Test cases
