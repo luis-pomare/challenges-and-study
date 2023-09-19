@@ -3,8 +3,9 @@ function meetingPlanner(slotsA, slotsB, dur) {
     for (let j = 0; j < slotsB.length; j += 1) {
       let maxStart = Math.max(slotsA[i][0], slotsB[j][0]);
       let minEnd = Math.min(slotsA[i][1], slotsB[j][1]);
+      let minStart = Math.min(slotsA[i][0], slotsB[j][0]);
 
-      if ((minEnd - maxStart) >= dur) return [Math.min(slotsA[i][0], slotsB[j][0]), Math.min(slotsA[i][0], slotsB[j][0]) + dur]
+      if ((minEnd - maxStart) >= dur) return [minStart, minStart + dur]
     }
   }
   return []
