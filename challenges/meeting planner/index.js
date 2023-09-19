@@ -1,4 +1,22 @@
 function meetingPlanner(slotsA, slotsB, dur) {
+  let i = 0;
+  let j = 0;
+
+  while (i < slotsA.length && j < slotsB.length) {
+    let start = Math.max(slotsA[i][0], slotsB[j][0]);
+    let end = Math.min(slotsA[i][1], slotsB[j][1])
+    let minStart = Math.min(slotsA[i][0], slotsB[j][0]);
+
+    if ((end - start) >= dur) return [minStart, minStart + dur]
+    if (slotsA[i][1] <= slotsB[j][1]) {
+      i += 1;
+    } else {
+      j += 1;
+    }
+
+
+  }
+  return []
 }
 
 // Test cases
