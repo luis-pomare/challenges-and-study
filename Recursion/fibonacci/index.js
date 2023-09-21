@@ -12,3 +12,6 @@ console.log(fibonacciCalculator(6));
 console.log(fibonacciCalculator(7));
 console.log(fibonacciCalculator(8));
 console.log(fibonacciCalculator(9));
+
+//This recusive solution works very well in small cuantities but in bigger ones it is going to freze
+//because it has a time complexity of o(2^n)
