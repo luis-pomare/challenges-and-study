@@ -1,5 +1,17 @@
-const fibonacciCalculator = (number) => {
-
+const fibonacciCalculator = (number, result = []) => {
+  switch (number) {
+    case 1:
+      result.unshift(1);
+      return result;
+      break;
+    case 2:
+      result.unshift(1);
+      break;
+    default:
+      if (number > 0) {
+        return number
+      }
+  }
 }
 
 console.log(fibonacciCalculator(1));
@@ -10,4 +22,3 @@ console.log(fibonacciCalculator(5));
 console.log(fibonacciCalculator(6));
 console.log(fibonacciCalculator(7));
 console.log(fibonacciCalculator(8));
-console.log(fibonacciCalculator(90));
