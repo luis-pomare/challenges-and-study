@@ -6,6 +6,7 @@ const fibonacciCalculator = (number, result = []) => {
       break;
     case 2:
       result.unshift(1);
+      return fibonacciCalculator((number - 1), result)
       break;
     default:
       if (number > 0) {
