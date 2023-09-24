@@ -10,10 +10,6 @@ const fibonacciCalculator = (number, result = []) => {
       result.unshift(1);
       return result;
 
-    case 2:
-      result.unshift(1);
-      return fibonacciCalculator((number - 1), result)
-
     default:
       if (number > 0) {
         result.unshift(numberHelper(number));
@@ -23,4 +19,4 @@ const fibonacciCalculator = (number, result = []) => {
   }
 }
 
-console.log(fibonacciCalculator(7000));
+console.log(fibonacciCalculator(7700));
