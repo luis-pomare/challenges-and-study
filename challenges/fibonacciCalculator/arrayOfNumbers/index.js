@@ -4,8 +4,13 @@ const numberHelper = (number, memo = {}) => {
   return memo[number] = numberHelper((number - 2), memo) + numberHelper((number - 1), memo);
 }
 
-const fibonacciCalculator = (number, result = []) => {
-
+const fibonacciCalculator = (number, counter = 1, result = []) => {
+  if (counter === number) {
+    result.push(numberHelper(number));
+    return result
+  }
+  result.push(numberHelper(counter))
+  return fibonacciCalculator(number, counter + 1, result)
 }
 
 console.log(fibonacciCalculator(70));
