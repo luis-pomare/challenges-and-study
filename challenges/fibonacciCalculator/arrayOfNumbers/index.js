@@ -1,16 +1,16 @@
-const numberHelper = (number, memo = {}) => {
+const fibonacciCalculator = (number, memo = {}) => {
   if (number in memo) return memo[number]
   if (number <= 2) return 1;
-  return memo[number] = numberHelper((number - 2), memo) + numberHelper((number - 1), memo);
+  return memo[number] = fibonacciCalculator((number - 2), memo) + fibonacciCalculator((number - 1), memo);
 }
 
-const fibonacciCalculator = (number, counter = 1, result = []) => {
+const arrayOfNumbers = (number, counter = 1, result = []) => {
   if (counter === number) {
-    result.push(numberHelper(number));
+    result.push(fibonacciCalculator(number));
     return result
   }
-  result.push(numberHelper(counter))
-  return fibonacciCalculator(number, counter + 1, result)
+  result.push(fibonacciCalculator(counter))
+  return arrayOfNumbers(number, counter + 1, result)
 }
 
-console.log(fibonacciCalculator(70));
+console.log(arrayOfNumbers(70));
