@@ -1,4 +1,4 @@
-const fibonacciCalculator = require("../fibonacciSingleResult");
+import fibonacciCalculator from "../fibonacciSingleResult/index.mjs";
 
 
 const arrayOfNumbers = (number, counter = 1, result = []) => {
@@ -10,4 +10,4 @@ const arrayOfNumbers = (number, counter = 1, result = []) => {
   return arrayOfNumbers(number, counter + 1, result)
 }
 
-console.log(arrayOfNumbers(70));
+console.log(arrayOfNumbers(12));

@@ -4,4 +4,4 @@ const fibonacciCalculator = (number, memo = {}) => {
   return memo[number] = fibonacciCalculator((number - 2), memo) + fibonacciCalculator((number - 1), memo);
 }
 
-module.exports = fibonacciCalculator;
+export default fibonacciCalculator;
