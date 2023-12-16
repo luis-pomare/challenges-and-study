@@ -1,6 +1,6 @@
 const reghex = (userInput) => {
-  const pattern = /mcv/
+  const pattern = /m.*?c/
   return userInput.match(pattern)
 }
 
-console.log(reghex('mcvs'));
+console.log(reghex('mpcvsmc'));
